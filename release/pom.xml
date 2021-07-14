@@ -10,7 +10,7 @@
   
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <tomcat.version>7.0.75</tomcat.version>
+    <tomcat.version>7.0.109</tomcat.version>
     <release.number>${project.version}</release.number>
   </properties>
   
@@ -113,13 +113,13 @@
             <phase>package</phase>
             <configuration>
               <tasks>
-                <echo message="Downloading JRE..." />
-                <get src="https://demo.geo-solutions.it/mapstore/jre.tar.gz" dest="${project.build.directory}/jre.tar.gz" />
-                <echo message="Untar JRE..." />
-                <gunzip src="${project.build.directory}/jre.tar.gz" dest="${project.build.directory}/jre.tar" />
-                <untar src="${project.build.directory}/jre.tar" dest="${project.build.directory}/jre" />
-                <echo message="Copy Database..." />
-                <copyfile src="data/geostore.h2.db" dest="${project.build.directory}/geostore.h2.db" />
+                <echo message="Downloading JRE..."/>
+                <get src="https://demo.geo-solutions.it/mapstore/jre.tar.gz" dest="${project.build.directory}/jre.tar.gz"/>
+                <echo message="Untar JRE..."/>
+                <gunzip src="${project.build.directory}/jre.tar.gz" dest="${project.build.directory}/jre.tar"/>
+                <untar src="${project.build.directory}/jre.tar" dest="${project.build.directory}/jre"/>
+                <echo message="Copy Database..."/>
+                <copyfile src="data/geostore.h2.db" dest="${project.build.directory}/geostore.h2.db"/>
               </tasks>
             </configuration>
             <goals>
